@@ -34,7 +34,6 @@ const slideImages = [
   }
 ];
 
-const gameArray = [];
 
 const shuffle = (array) => {
   let currentIndex = array.length,  randomIndex;
@@ -56,15 +55,24 @@ const shuffle = (array) => {
 
 
 
-
-
-
 function Engine() {
   const [score,setScore] = useState(0);
+  const [gameArray,setGameArray] = useState([]);
+
+  const gameOver = () =>{
+    alert("Game Over")
+    setScore(score-score)
+    setGameArray([])
+  }
+  const gameContinue = (cap) =>{
+    setScore(score+1)
+    gameArray.push(cap)
+  }
 
   const add = (cap)=>{
-    gameArray.push(cap)
-    setScore(score+1)
+    gameArray.includes(cap) ? gameOver() : gameContinue(cap)
+
+
 }
 
   useEffect(()=>{

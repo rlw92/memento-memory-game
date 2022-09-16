@@ -49,8 +49,7 @@ function Layout({ images, add, score }) {
               <img src={fadeImage.url} style={{width:'100%',height:'100%'}} /*onClick={()=>{console.log("HEY" + fadeImage.caption)}}*/
               onClick={()=>add(fadeImage.caption)} />
             </div>
-            <h2>{fadeImage.caption}</h2>
-          </div>
+            </div>
         ))}
       </Fade>
 
@@ -62,9 +61,9 @@ function Layout({ images, add, score }) {
 
 
 
-
+{/*
 <a href="https://www.npmjs.com/package/react-slideshow-image">Website Used</a>
-
+*/}
       </div>
 
 
