@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/memento-memory-game/static/css/main.4d99abf6.css",
+    "main.js": "/memento-memory-game/static/js/main.09a21f1b.js",
+    "static/js/787.d91eacca.chunk.js": "/memento-memory-game/static/js/787.d91eacca.chunk.js",
+    "static/media/img5.png": "/memento-memory-game/static/media/img5.35f3074167a453ec61a7.png",
+    "static/media/img1.png": "/memento-memory-game/static/media/img1.476aa878116a348ab7aa.png",
+    "static/media/img2.jpg": "/memento-memory-game/static/media/img2.aa43bf527b24a5c32407.jpg",
+    "static/media/img4.jpg": "/memento-memory-game/static/media/img4.7b253c5793ec60291ca2.jpg",
+    "static/media/img6.jpg": "/memento-memory-game/static/media/img6.008d60ae182500b0cd9d.jpg",
+    "static/media/img3.jpg": "/memento-memory-game/static/media/img3.ae03d2f577112c947bd3.jpg",
+    "index.html": "/memento-memory-game/index.html",
+    "main.4d99abf6.css.map": "/memento-memory-game/static/css/main.4d99abf6.css.map",
+    "main.09a21f1b.js.map": "/memento-memory-game/static/js/main.09a21f1b.js.map",
+    "787.d91eacca.chunk.js.map": "/memento-memory-game/static/js/787.d91eacca.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d99abf6.css",
+    "static/js/main.09a21f1b.js"
+  ]
+}
