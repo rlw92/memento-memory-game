@@ -1,5 +1,7 @@
 import { useState, useEffect} from 'react'
 import Layout from './Layout';
+import GameOverModal from './GameOverModal'
+import VictoryModal from './VictoryModal'
 import img1 from '../images/img1.png'
 import img2 from '../images/img2.jpg'
 import img3 from '../images/img3.jpg'
@@ -58,15 +60,20 @@ const shuffle = (array) => {
 function Engine() {
   const [score,setScore] = useState(0);
   const [gameArray,setGameArray] = useState([]);
+  const [shwGMdl,setShwGMdl] = useState(false)
+  const [shwVMdl,setShwVMdl] = useState(false)
+
+  const flsGMdl = () =>{setShwGMdl(false)}
+  const flsVMdl = () =>{setShwVMdl(false)}
 
   const gameOver = () =>{
-    alert("Game Over")
     setScore(score-score)
     setGameArray([])
+    setShwGMdl(true)
   }
 
   const gameWin=()=>{
-    alert("Victory")
+    setShwVMdl(true)
     setScore(score-score)
     setGameArray([])
   }
@@ -87,11 +94,15 @@ function Engine() {
 )
   return (
     <div>
+
+    {shwGMdl && <GameOverModal chng={flsGMdl}/>}
+    {shwVMdl && <VictoryModal chng={flsVMdl}/>}
     <Layout
     images={slideImages}
     add={add}
     score={score}
     />
+
     </div>
   );
 }
