@@ -64,20 +64,24 @@ function Engine() {
     setScore(score-score)
     setGameArray([])
   }
+
+  const gameWin=()=>{
+    alert("Victory")
+    setScore(score-score)
+    setGameArray([])
+  }
+
   const gameContinue = (cap) =>{
     setScore(score+1)
     gameArray.push(cap)
+    score===5 ? gameWin() : console.log("uneeded")
   }
 
   const add = (cap)=>{
     gameArray.includes(cap) ? gameOver() : gameContinue(cap)
-
-
 }
 
   useEffect(()=>{
-    console.log(gameArray)
-    console.log(gameArray.includes("Slide 1"))
     shuffle(slideImages)
   }
 )

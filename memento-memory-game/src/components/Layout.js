@@ -1,18 +1,27 @@
 import { useState, useEffect} from 'react'
+import InstructionModal from './InstructionModal'
 import { Slide } from 'react-slideshow-image';
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 
-
-
-
 function Layout({ images, add, score }) {
+  const [shwIMdl,setShwIMdl] = useState(true)
 
+  const flsIMdl = () =>{setShwIMdl(false)}
 
 
 
   return (
       <div>
+
+    { shwIMdl && <InstructionModal
+                  chng={flsIMdl}
+                  arr={images}/> }
+
+
+      <div className="gameOverModal"></div>
+      <div className="victoryModal"></div>
+
       <h1>Memento Memory Game</h1>
 
       <div className="scoreBar">
