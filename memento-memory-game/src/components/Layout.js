@@ -1,44 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import { Slide } from 'react-slideshow-image';
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
-import img1 from '../images/img1.png'
-import img2 from '../images/img2.jpg'
-import img3 from '../images/img3.jpg'
-import img4 from '../images/img4.jpg'
-import img5 from '../images/img5.png'
-import img6 from '../images/img6.jpg'
-
-const slideImages = [
-  {
-    url: img1,
-    caption: 'Slide 1'
-  },
-  {
-    url: img2,
-    caption: 'Slide 2'
-  },
-  {
-    url: img3,
-    caption: 'Slide 3'
-  },
-  {
-    url: img4,
-    caption: 'Slide 4'
-  },
-  {
-    url: img5,
-    caption: 'Slide 5'
-  },
-  {
-    url: img6,
-    caption: 'Slide 6'
-  }
-];
 
 
 
-function Layout() {
+
+function Layout({ images, add, score }) {
+
+
 
 
   return (
@@ -46,7 +16,7 @@ function Layout() {
       <h1>Memento Memory Game</h1>
 
       <div className="scoreBar">
-      <h2>Score:0 </h2>
+      <h2>Score:{score} </h2>
       </div>
 
 
@@ -73,10 +43,11 @@ function Layout() {
 {/*fade functioniality-uncomment to use, then comment out slide*/}
 
         <Fade>
-        {slideImages.map((fadeImage, index) => (
+        {images.map((fadeImage, index) => (
           <div className="each-fade" key={index}>
             <div className="image-container" style={{width:'100%',height:'400px',}}>
-              <img src={fadeImage.url} style={{width:'100%',height:'100%'}} onClick={()=>{console.log("HEY" + fadeImage.caption)}}/>
+              <img src={fadeImage.url} style={{width:'100%',height:'100%'}} /*onClick={()=>{console.log("HEY" + fadeImage.caption)}}*/
+              onClick={()=>add(fadeImage.caption)} />
             </div>
             <h2>{fadeImage.caption}</h2>
           </div>
